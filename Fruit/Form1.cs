@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Fruit
 {
@@ -21,6 +22,12 @@ namespace Fruit
         public int ME = 9;
         public int SD = 5;
         public int SE = 9;
+
+        private void playaudio() // defining the function
+        {
+            SoundPlayer audio = new SoundPlayer(Fruit.Properties.Resources.Sbor); // here WindowsFormsApplication1 is the namespace and Connect is the audio file name
+            audio.Play();
+        }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -77,6 +84,7 @@ namespace Fruit
             }
             if ((MD == 0 && ME == 0) && (SD == 0 && SE == 0))
             {
+                playaudio();
                 Count.Enabled = false;
             }
         }
