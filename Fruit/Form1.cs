@@ -26,10 +26,10 @@ namespace Fruit
         {
             Count.Enabled = false;
             Count.Interval = 1000;
-            MinDes.Text = "5";            
-            MinEd.Text = "9";            
-            SecDes.Text = "5";            
-            SecEd.Text = "9";            
+            MinDes.Text = MD.ToString();            
+            MinEd.Text = ME.ToString();            
+            SecDes.Text = SD.ToString();            
+            SecEd.Text = SE.ToString();            
         }
 
         private void BtStart_Click(object sender, EventArgs e)
@@ -40,6 +40,14 @@ namespace Fruit
         private void BtStop_Click(object sender, EventArgs e)
         {
             Count.Enabled = false;
+            MD = 5;
+            ME = 9;
+            SD = 5;
+            SE = 9;
+            MinDes.Text = MD.ToString();
+            MinEd.Text = ME.ToString();
+            SecDes.Text = SD.ToString();
+            SecEd.Text = SE.ToString();
         }
 
         private void Count_Tick(object sender, EventArgs e)
