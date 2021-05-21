@@ -85,7 +85,15 @@ namespace Fruit
             if ((MD == 0 && ME == 0) && (SD == 0 && SE == 0))
             {
                 playaudio();
-                Count.Enabled = false;
+                MD = 5;
+                ME = 9;
+                SD = 5;
+                SE = 9;
+                MinDes.Text = MD.ToString();
+                MinEd.Text = ME.ToString();
+                SecDes.Text = SD.ToString();
+                SecEd.Text = SE.ToString();
+                Count.Enabled = false;                
             }
         }
     }
