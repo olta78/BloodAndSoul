@@ -41,6 +41,14 @@ namespace Fruit
 
         private void BtStart_Click(object sender, EventArgs e)
         {
+            MD = 5;
+            ME = 9;
+            SD = 5;
+            SE = 9;
+            MinDes.Text = MD.ToString();
+            MinEd.Text = ME.ToString();
+            SecDes.Text = SD.ToString();
+            SecEd.Text = SE.ToString();
             Count.Enabled = true;
         }
 
@@ -84,15 +92,7 @@ namespace Fruit
             }
             if ((MD == 0 && ME == 0) && (SD == 0 && SE == 0))
             {
-                playaudio();
-                MD = 5;
-                ME = 9;
-                SD = 5;
-                SE = 9;
-                MinDes.Text = MD.ToString();
-                MinEd.Text = ME.ToString();
-                SecDes.Text = SD.ToString();
-                SecEd.Text = SE.ToString();
+                playaudio();                
                 Count.Enabled = false;                
             }
         }
